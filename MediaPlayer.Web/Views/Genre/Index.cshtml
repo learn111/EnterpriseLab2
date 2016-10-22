@@ -1,0 +1,22 @@
+﻿@model MediaPlayer.Cqrs.QueryResult.GetAllGenresQueryResult
+
+@{
+    ViewBag.Title = "Жанры";
+}
+
+<h2>Жанры</h2>
+
+<table class="table table-condensed table-responsive">
+    <thead>
+    <tr>
+        <td>@Html.DisplayNameFor(x => x.Genres.FirstOrDefault().GenreName)</td>
+    </tr>
+
+    </thead>
+    @foreach (var genre in Model.Genres)
+    {
+        <tr>
+            <td>@genre.GenreName</td>
+        </tr>
+    }
+</table>
