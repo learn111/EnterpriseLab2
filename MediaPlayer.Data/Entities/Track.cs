@@ -8,6 +8,8 @@ namespace MediaPlayer.Data.Entities
         public string Name { get; set; }
         public bool IsShared { get; set; }
         public int SingerId { get; set; }
+        public int CustomFileId { get; set; }
+        public virtual CustomFile CustomFile { get; set; }
         public virtual Singer Singer { get; set; }
         public virtual ICollection<Genre> Genres { get; set; }
         public virtual ICollection<Playlist> Playlists { get; set; }

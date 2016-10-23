@@ -7,7 +7,11 @@ namespace MediaPlayer.Web.App_Start
     {
         public static void Configure()
         {
-            Mapper.Initialize(cfg => { cfg.AddProfile<CqrsAutomapperConfig>(); });
+            Mapper.Initialize(cfg =>
+            {
+                cfg.AddProfile<CqrsAutomapperConfig>();
+                cfg.AddProfile<WebAutomapperConfig>();
+            });
             Mapper.AssertConfigurationIsValid();
         }
     }

@@ -62,16 +62,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aggregate\GenreModel.cs" />
+    <Compile Include="Aggregate\SingerModel.cs" />
+    <Compile Include="Aggregate\TrackModel.cs" />
+    <Compile Include="CommandHandler\CreateGenreCommandHandler.cs" />
+    <Compile Include="CommandHandler\DeleteGenreCommandHandler.cs" />
+    <Compile Include="CommandHandler\Tracks\CreateTrackCommandHandler.cs" />
+    <Compile Include="Command\CreateGenreCommand.cs" />
+    <Compile Include="Command\DeleteGenreCommand.cs" />
+    <Compile Include="Command\Tracks\CreateTrackCommand.cs" />
     <Compile Include="CqrsAutomapperConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryHandler\GetAllGenresQueryHandler.cs" />
+    <Compile Include="QueryHandler\GetAllSingersQueryHandler.cs" />
     <Compile Include="QueryResult\GetAllGenresQueryResult.cs" />
+    <Compile Include="QueryResult\GetAllSingersQueryResult.cs" />
     <Compile Include="Query\GetAllGenresQuery.cs" />
+    <Compile Include="Query\GetAllSingersQuery.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CommandHandler\" />
-    <Folder Include="Command\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\MediaPlayer.Core\MediaPlayer.Core.csproj">
       <Project>{90BCBC7F-2396-4D94-BDB6-F46A8797F345}</Project>

@@ -1,0 +1,24 @@
+﻿@model MediaPlayer.Web.Models.TracksViewModels.CreateTrackViewModel
+
+@{
+    ViewBag.Title = "Создать трек";
+}
+
+<h2>Создать трек</h2>
+
+@using (Html.BeginForm("Create", "Track", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.CreateTrackCommand.Name)
+        @Html.EditorFor(x => x.CreateTrackCommand.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.CreateTrackCommand.SingerId)
+        @Html.DropDownListFor(x => x.CreateTrackCommand.SingerId, Model.SelectSingerViewModels.Select(x=>new SelectListItem()
+        {
+            Text = x.SingerName,
+            Value = x.SingerId.ToString()
+        }))
+    </div>
+    <button class="btn btn-succes" type="submit">Создать</button>
+}

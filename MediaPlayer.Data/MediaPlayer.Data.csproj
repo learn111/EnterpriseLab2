@@ -58,8 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationIdentityDbContext.cs" />
+    <Compile Include="Configuration\CustomFileConfiguration.cs" />
     <Compile Include="DbContextWrapper\DbContextWrapper.cs" />
     <Compile Include="DbContextWrapper\IDbContextWrapper.cs" />
+    <Compile Include="Entities\CustomFile.cs" />
     <Compile Include="Entities\Genre.cs" />
     <Compile Include="Entities\Identity\User.cs" />
     <Compile Include="Entities\Playlist.cs" />
@@ -70,6 +72,18 @@
     <Compile Include="Migrations\ApplicationIdentityDbContext\201610160858575_Init.Designer.cs">
       <DependentUpon>201610160858575_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationIdentityDbContext\201610222051506_FixIntGenreName.cs" />
+    <Compile Include="Migrations\ApplicationIdentityDbContext\201610222051506_FixIntGenreName.Designer.cs">
+      <DependentUpon>201610222051506_FixIntGenreName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationIdentityDbContext\201610230634396_CustomFile.cs" />
+    <Compile Include="Migrations\ApplicationIdentityDbContext\201610230634396_CustomFile.Designer.cs">
+      <DependentUpon>201610230634396_CustomFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationIdentityDbContext\201610230816583_Fix.cs" />
+    <Compile Include="Migrations\ApplicationIdentityDbContext\201610230816583_Fix.Designer.cs">
+      <DependentUpon>201610230816583_Fix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ApplicationIdentityDbContext\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -77,12 +91,19 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configuration\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\ApplicationIdentityDbContext\201610160858575_Init.resx">
       <DependentUpon>201610160858575_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationIdentityDbContext\201610222051506_FixIntGenreName.resx">
+      <DependentUpon>201610222051506_FixIntGenreName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationIdentityDbContext\201610230634396_CustomFile.resx">
+      <DependentUpon>201610230634396_CustomFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ApplicationIdentityDbContext\201610230816583_Fix.resx">
+      <DependentUpon>201610230816583_Fix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

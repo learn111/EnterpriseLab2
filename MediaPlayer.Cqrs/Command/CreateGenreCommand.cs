@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using MediaPlayer.Core.Cqrs.Contracts;
 
-namespace MediaPlayer.Cqrs.Aggregate
+namespace MediaPlayer.Cqrs.Command
 {
-    public class GenreModel
+    public class CreateGenreCommand : ICommand
     {
-        public int GenreId { get; set; }
         [Display(Name = "Название")]
         public string GenreName { get; set; }
     }

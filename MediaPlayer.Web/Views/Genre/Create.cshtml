@@ -1,0 +1,15 @@
+﻿@model MediaPlayer.Cqrs.Command.CreateGenreCommand
+
+@{
+    ViewBag.Title = "Создать новый жанр";
+}
+
+<h2>Создать новый жанр</h2>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.GenreName)
+        @Html.EditorFor(x => x.GenreName)
+    </div>
+    <button class="btn btn-succes" type="submit">Создать</button>
+}
